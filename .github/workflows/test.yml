@@ -1,0 +1,12 @@
+name: test
+
+on:
+  pull_request 
+
+jobs: 
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checout@v2
+      - run: cd auth && npm install && npm start
+  
